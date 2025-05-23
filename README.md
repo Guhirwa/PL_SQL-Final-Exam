@@ -92,6 +92,56 @@ This system(database) solves these issues by providing a **centralized, automate
 
 ## 📍 PHASE II: Business Process Modeling (Related to Management Information Systems - MIS)
 
+    ## 1. Purpose & Scope
+
+This document describes the **Expenditure Request & Control** workflow managed by the `Financial and Economic Planning Management System (FEPMS)`. The goal is to illustrate how an organizational expenditure request is initiated, validated, approved or rejected, paid out, and recorded—highlighting the information flows, decision points, and the system’s role in enforcing budgetary controls and maintaining audit trails.
+
+## 2. Key Entities (Swimlanes)
+
+| Entity | Responsibility |
+| --- | --- |
+| **Employee** | Initiates and submits expenditure requests via FEPMS. |
+| **System (FEPMS)** | Validates budget availability, routes requests, enforces business rules, and records transactions. |
+| **Department Manager** | Reviews requests for departmental appropriateness and approves or rejects. |
+| **Finance Officer** | Schedules and executes approved payments. |
+
+![Screenshot from 2025-05-25 12-46-19.png](./Images/Screenshot%20from%202025-05-25%2012-46-19.png)
+
+## 3. High-Level Process Steps
+
+1. **Request Initiation**
+    - Employee completes an expenditure request form, specifying department, category, amount, and justification.
+2. **Automated Budget Validation**
+    - FEPMS checks the requested amount against the current departmental budget.
+    - If **within budget**, the request is routed to the Department Manager.
+    - If **over budget**, FEPMS returns an immediate rejection back to the Employee.
+3. **Managerial Review**
+    - Department Manager inspects the request context and justifications.
+    - If **approved**, the request is forwarded to Finance; if **rejected**, a notice is sent back to the Employee.
+4. **Payment Execution**
+    - Finance Officer schedules and initiates the payment to the vendor or service provider.
+5. **Audit & Recording**
+    - FEPMS logs the final payment details, updates budget balances, and stores a complete audit trail of every action and decision.
+
+## 4. Decision Points & Data Flows
+
+- **Budget Gateway (`Within budget?`)**
+    - **Yes:** Continue to managerial review.
+    - **No:** System issues rejection.
+- **Approval Gateway (`Approved?`)**
+    - **Yes:** Proceed to finance execution.
+    - **No:** Manager issues rejection.
+- **Message Flows**
+    - Bidirectional communications between Employee, System, Manager, and Finance Officer ensure every step is tracked and stakeholders are notified.
+
+## 5. MIS Support & Benefits
+
+- **Real-Time Controls:** Prevents overspending by instantly enforcing budget limits.
+- **Automated Routing:** Streamlines approvals, replacing manual emails or paper forms.
+- **Transparency & Accountability:** Each action is timestamped and centrally logged, simplifying internal reviews and external audits.
+- **Data-Driven Decisions:** Live updates to spending dashboards help leadership reallocate resources proactively.
+- **Compliance:** Built-in workflows and audit trails meet regulatory and institutional policy requirements.
+
 ## 📍 PHASE III: Logical Model Design
 
 - I Implemented all kind of relation ship followed:
