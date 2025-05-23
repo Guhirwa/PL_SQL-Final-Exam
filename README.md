@@ -94,6 +94,16 @@ This system(database) solves these issues by providing a **centralized, automate
 
 ## 📍 PHASE III: Logical Model Design
 
+- I Implemented all kind of relation ship followed:
+    1. One-to-One
+    2. One-to-Many
+    3. Many-to-One
+    4. Many-to-Many
+
+- ERD Diagram:
+
+![](./Images/FEPMS%20Database%20Logical%20Model.png)
+
 ## 📍 PHASE IV: Database (Pluggable Database) Creation and Naming
 
 ### Task 1: Pluggable Database (PDB) Creation
