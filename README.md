@@ -2988,6 +2988,7 @@ My system aims to manage financial data securely and efficiently. This implement
 I implemented a robust auditing and restriction system using a new `security_audit` package, separate from `financial_analytics`, to enforce weekday and holiday restrictions and track user actions. By creating `shema_kelly` and `divin_araje` as Oracle users and modifying the triggers to map `USER` to `Users.UserID`, I resolved the user identification issue, ensuring accurate auditing. The `Public_Holidays` table with Eid al-Fitr, `Audit_Log` table, triggers on `Expenditure` and `Budget`, and updated test script validate my solution using real data. Despite date-related testing challenges, my implementation meets the phase’s requirements, enhancing my system’s security, automation, and accountability. This modular approach ensures my financial management system is well-equipped for real-world challenges, and my detailed documentation reflects my thorough understanding of advanced PL/SQL programming.
 
 **Note**: For holiday tests (e.g., Test 3), execution on June 7, 2025, is ideal, or a date-mocking solution could be explored if supported by my Oracle environment.
+
 ## 📦 Technologies Used
 
 - **Database:** Oracle 21c (Pluggable Architecture)
@@ -2995,7 +2996,9 @@ I implemented a robust auditing and restriction system using a new `security_aud
 - **Containerization:** Docker / Oracle-db Image
 - **Future Innovation refinement:** Front-End design
 
----
+### REFERENCE
+
+Feel free to [visit my Notion page](https://www.notion.so/FINAL-EXAM-1f9035b0bea980d2b852ce38ae190a9a?pvs=21) to see the full detailed documentaion
 
 ## 🙌 Author
 
